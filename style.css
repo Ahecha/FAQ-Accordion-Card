@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: hsl(273, 75%, 66%); 
+    
   
 } 
 
@@ -22,7 +23,7 @@ body {
 .image {
     width: 70%;
     transform: translate(19%, 44%);
-    filter: drop-shadow(0 1.5rem 0 hsl(240, 5%, 91%));
+  /*  filter: drop-shadow(0 1.5rem 0 hsl(240, 5%, 91%)); */
 
 } 
 
@@ -65,19 +66,22 @@ aside {
 } 
 
 @media (min-width: 960px) {
+    
     body {
+        min-height: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: brown;
-        margin-top: 4%;
+        margin-top: 10%;
+
     }
 
     .container {
         display: flex;
         width: 60%;
         background-color: white;
-        padding: 4% 3%;
+        /* padding: 4% 4% 0% 0%; */
+        border-radius: 1rem;
 
     }
 
@@ -85,15 +89,28 @@ aside {
         text-align: left;
     }
 
+    .image-container {
+        padding: 7% 0%;
+        overflow: hidden;
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: 122% 80%;
+        background-origin: padding-box;
+        background-size: 200%;
+    }
+
     .image {
-        width: 50%;
-        transform: translate(-30%, 0);
-        filter: drop-shadow(0 2rem 0 hsl(240, 5%, 91%));
+        width: 100%;
+        transform: translate(-17%, 10%);
+        /* filter: drop-shadow(0 2rem 0 hsl(240, 5%, 91%)); */
+        
         
     }
 
     aside {
-        width: 50%;
-        padding: 0 6% 4% 0;
+        width: 60%;
+        padding: 7% 1%;
+        margin-right: 8%;
+
     }
 }
