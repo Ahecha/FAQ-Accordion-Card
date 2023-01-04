@@ -45,3 +45,5 @@ questions.forEach((question) => {
     question.classList.toggle("show-text");
   });
 }); */
+
+/* https://github.com/FluffyKas/faq-accordion-card.git */
