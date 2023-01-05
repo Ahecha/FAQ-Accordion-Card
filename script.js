@@ -1,5 +1,8 @@
 const changeImg = document.querySelector(".image").src="./images/illustration-woman-online-desktop.svg";
-let question = document.querySelector(".questions");
+const question = document.querySelectorAll(".questions");
+const arrow = document.querySelector(".arrow-down");
+const answer = document.querySelector(".answers");
+const question2 = document.querySelector(".questions");
 
 
 function imgChanger(mediaQuery) {
@@ -13,37 +16,27 @@ imgChanger(mediaQuery) // Call listener function at run time
 mediaQuery.addListener(imgChanger);
 
 
+const disappear = (e)=> {
+  let answers = e.currentTarget.answer;
+  let questions = e.currentTarget.question2;
+  let arrowIcon = e.currentTarget.arrow;
+  
 
-function counter(question) {
-   return document.querySelector(".answers").style.display = "block";
-    
+  if (answer.style.display === "none") {
+    answer.style.display = "block";
+    question2.style.setProperty("font-weight", "700");
+    arrow.style.transform= "rotate(180deg)";
+} else {
+  answer.style.display = "none";
+  question2.style.fontWeight = "400";
+  arrow.style.transform= "rotate(0deg)";
+}
+
 };
 
-question.addEventListener("click", counter);
+for (let questions of question) {
+  answer.style.display = "none";
+  questions.addEventListener("click", disappear);
 
+}
 
-/* const questions = document.querySelectorAll(".question");
-
-questions.forEach((question) => {
-  const button = question.querySelector(".question__button");
-  const questionText = question.querySelector(".question__title__text");
-  button.addEventListener("click", () => {
-    questions.forEach((item) => {
-      if(item !== question) {
-        item.classList.remove("show-text");
-      }
-    });
-    question.classList.toggle("show-text");
-  });
-
-  questionText.addEventListener("click", () => {
-    questions.forEach((item) => {
-      if(item !== question) {
-        item.classList.remove("show-text");
-      }
-    });
-    question.classList.toggle("show-text");
-  });
-}); */
-
-/* https://github.com/FluffyKas/faq-accordion-card.git */
