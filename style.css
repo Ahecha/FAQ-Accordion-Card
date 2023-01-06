@@ -44,6 +44,7 @@ aside {
     align-items: center;
     font-size: 0.9rem;
     padding: 6% 0;
+    font-weight: 400;
  
 }
 
@@ -52,8 +53,8 @@ aside {
     color: hsl(14, 88%, 65%);
 }
 
-.arrow-down:hover {
-    transform: rotate(180deg);
+.arrow-down {
+    transform: rotate(0deg);
 }
 
 
@@ -103,8 +104,14 @@ aside {
         width: 100%;
         transform: translate(-17%, 10%);
         filter: drop-shadow(0 0 0 hsl(240, 5%, 91%)); 
-        
-        
+         
+    }
+
+    .box {
+        width: 10%;
+        position: absolute;
+        transform: translate(-55%, 111%);
+        z-index: 1;
     }
 
     aside {
