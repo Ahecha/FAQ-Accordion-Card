@@ -63,8 +63,12 @@ aside {
     display: none; 
     padding-bottom: 6%;
     font-weight: 300;
-
 } 
+
+.box {
+    display: none;
+    visibility: 0;
+}
 
 @media (min-width: 960px) {
     
@@ -76,6 +80,13 @@ aside {
         margin-top: 4%;
 
     }
+
+    .answers {
+        font-size: 0.8rem;
+        display: none; 
+        padding-bottom: 6%;
+        font-weight: 300;
+    }     
 
     .container {
         display: flex;
@@ -98,6 +109,7 @@ aside {
         background-position: 122% 80%;
         background-origin: padding-box;
         background-size: 200%;
+        z-index: 999;
     }
 
     .image {
@@ -108,10 +120,12 @@ aside {
     }
 
     .box {
-        width: 10%;
+        width: 13%;
         position: absolute;
-        transform: translate(-55%, 111%);
-        z-index: 1;
+        transform: translate(-53%, 60%);
+        z-index: 2000;
+        visibility: 1;
+        display: block;
     }
 
     aside {
@@ -119,5 +133,21 @@ aside {
         padding: 7% 1%;
         margin-right: 8%;
 
+    }
+
+    @media screen and (max-width: 800px) {
+        .box {
+            width: 10%;
+            position: absolute;
+            transform: translate(-53%, 50%);
+            z-index: 2000;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .box {
+            display: none;
+            visibility: 0;
+        }
     }
 }
